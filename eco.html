@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Economics for Engineers – Complete Formula Sheet (WBUT)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Mono&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; background: #f4f6fb; color: #1a1a2e; }
+
+  .cover {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white; text-align: center; padding: 60px 40px 50px;
+  }
+  .cover h1 { font-size: 2.2em; font-weight: 700; letter-spacing: 1px; }
+  .cover h2 { font-size: 1.1em; font-weight: 400; margin-top: 10px; opacity: 0.8; }
+  .cover .badge { display: inline-block; background: #e94560; color: white;
+    padding: 6px 18px; border-radius: 20px; margin-top: 16px; font-size: 0.85em; font-weight: 600; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 30px 20px 60px; }
+
+  .section { background: white; border-radius: 12px; margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); overflow: hidden; }
+  .section-header { padding: 14px 22px; font-size: 1.05em; font-weight: 700;
+    color: white; display: flex; align-items: center; gap: 10px; }
+  .section-body { padding: 18px 22px; }
+
+  /* Color themes per section */
+  .blue   .section-header { background: #1565c0; }
+  .green  .section-header { background: #2e7d32; }
+  .purple .section-header { background: #6a1b9a; }
+  .red    .section-header { background: #c62828; }
+  .teal   .section-header { background: #00695c; }
+  .orange .section-header { background: #e65100; }
+  .navy   .section-header { background: #1a237e; }
+  .brown  .section-header { background: #4e342e; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.93em; margin-top: 10px; }
+  th { background: #f0f4ff; padding: 10px 12px; text-align: left; font-weight: 700;
+       border-bottom: 2px solid #dde3f0; color: #1a237e; }
+  td { padding: 10px 12px; border-bottom: 1px solid #eef0f8; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafbff; }
+
+  .formula { font-family: 'Fira Mono', 'Courier New', monospace;
+    background: #f0f4ff; border-left: 4px solid #1565c0;
+    padding: 6px 12px; border-radius: 0 6px 6px 0;
+    display: inline-block; font-size: 0.95em; color: #0d2b6b; }
+
+  .green .formula  { border-color: #2e7d32; color: #1b5e20; background: #f0fff2; }
+  .purple .formula { border-color: #6a1b9a; color: #4a0072; background: #faf0ff; }
+  .red .formula    { border-color: #c62828; color: #7f0000; background: #fff0f0; }
+  .teal .formula   { border-color: #00695c; color: #003d33; background: #f0fffc; }
+  .orange .formula { border-color: #e65100; color: #7f2d00; background: #fff5f0; }
+  .navy .formula   { border-color: #1a237e; color: #0d1642; background: #f0f2ff; }
+  .brown .formula  { border-color: #4e342e; color: #321911; background: #fff8f5; }
+
+  .note { font-size: 0.82em; color: #666; margin-top: 4px; font-style: italic; }
+  .tag { display: inline-block; background: #e94560; color: white;
+    font-size: 0.72em; padding: 2px 8px; border-radius: 10px; font-weight: 600;
+    vertical-align: middle; margin-left: 6px; }
+  .tag.green { background: #2e7d32; }
+  .tag.blue  { background: #1565c0; }
+
+  .decision { background: #fff8e1; border: 1px solid #ffd54f;
+    border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 0.9em; }
+  .decision strong { color: #e65100; }
+
+  .quick-ref { background: #1a1a2e; color: white; border-radius: 12px;
+    padding: 22px 26px; margin-bottom: 28px; }
+  .quick-ref h3 { color: #e94560; margin-bottom: 14px; font-size: 1.1em; }
+  .qr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .qr-item { background: rgba(255,255,255,0.07); border-radius: 8px;
+    padding: 10px 14px; font-size: 0.88em; }
+  .qr-item .qr-title { color: #90caf9; font-weight: 700; margin-bottom: 4px; }
+  .qr-item .qr-f { font-family: 'Fira Mono', monospace; color: #a5d6a7; font-size: 0.95em; }
+
+  .icon { font-size: 1.1em; }
+  h4 { margin: 14px 0 8px; color: #333; font-size: 0.97em; }
+  @media print {
+    body { background: white; }
+    .section { box-shadow: none; border: 1px solid #ddd; }
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>📐 Economics for Engineers</h1>
+  <h2>Complete Formula Reference Sheet — WBUT</h2>
+  <div class="badge">All Topics · Exam Ready</div>
+</div>
+
+<div class="container">
+
+  <!-- QUICK REFERENCE -->
+  <div class="quick-ref">
+    <h3>⚡ At-a-Glance: Which Formula for Which Situation?</h3>
+    <div class="qr-grid">
+      <div class="qr-item"><div class="qr-title">Single lump sum → Future</div><div class="qr-f">FV = PV × (1+i)ⁿ</div></div>
+      <div class="qr-item"><div class="qr-title">Single lump sum → Present</div><div class="qr-f">PV = FV / (1+i)ⁿ</div></div>
+      <div class="qr-item"><div class="qr-title">Equal payments → Future total</div><div class="qr-f">FV = A × FVIFA(i,n)</div></div>
+      <div class="qr-item"><div class="qr-title">Equal payments → Present total</div><div class="qr-f">PV = A × PVIFA(i,n)</div></div>
+      <div class="qr-item"><div class="qr-title">EMI / EAW from lump sum</div><div class="qr-f">A = PV / PVIFA(i,n)</div></div>
+      <div class="qr-item"><div class="qr-title">Unequal cash flows project</div><div class="qr-f">NPV = Σ[CF × PVIF] − I₀</div></div>
+      <div class="qr-item"><div class="qr-title">Break-even units</div><div class="qr-f">BEP = FC / (SP − VC)</div></div>
+      <div class="qr-item"><div class="qr-title">Cost estimation scaling</div><div class="qr-f">C₂ = C₁×(Q₂/Q₁)ˣ×(Idx₂/Idx₁)</div></div>
+    </div>
+  </div>
+
+  <!-- 1. INTEREST & TIME VALUE -->
+  <div class="section blue">
+    <div class="section-header"><span class="icon">💰</span> 1. Interest & Time Value of Money</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Formula Name</th><th>Formula</th><th>Use When</th></tr>
+        <tr>
+          <td><strong>Simple Interest</strong></td>
+          <td><span class="formula">I = P × i × n</span><br>
+              <span class="formula">A = P(1 + i·n)</span></td>
+          <td>Interest only on principal; short-term loans</td>
+        </tr>
+        <tr>
+          <td><strong>Compound Interest (FV)</strong></td>
+          <td><span class="formula">FV = PV × (1 + i)ⁿ</span></td>
+          <td>Single amount growing over n periods</td>
+        </tr>
+        <tr>
+          <td><strong>Present Value (PV)</strong></td>
+          <td><span class="formula">PV = FV / (1 + i)ⁿ</span><br>
+              <span class="formula">PV = FV × PVIF(i,n)</span></td>
+          <td>Find today's worth of a future amount</td>
+        </tr>
+        <tr>
+          <td><strong>PVIF</strong><br><span class="note">PV Interest Factor</span></td>
+          <td><span class="formula">PVIF(i,n) = 1 / (1+i)ⁿ</span></td>
+          <td>Table lookup for single amount discounting</td>
+        </tr>
+        <tr>
+          <td><strong>FVIF</strong><br><span class="note">FV Interest Factor</span></td>
+          <td><span class="formula">FVIF(i,n) = (1+i)ⁿ</span></td>
+          <td>Table lookup for single amount compounding</td>
+        </tr>
+        <tr>
+          <td><strong>Effective Interest Rate</strong></td>
+          <td><span class="formula">ieff = (1 + r/m)ᵐ − 1</span></td>
+          <td>When compounding is more frequent than annual<br><span class="note">r = nominal rate, m = compounding periods/year</span></td>
+        </tr>
+        <tr>
+          <td><strong>Continuous Compounding</strong></td>
+          <td><span class="formula">FV = PV × eʳⁿ</span></td>
+          <td>When m → ∞ (continuous compounding)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. ANNUITY -->
+  <div class="section green">
+    <div class="section-header"><span class="icon">📅</span> 2. Annuity Formulas (Equal Payments Every Period)</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Formula Name</th><th>Formula</th><th>Use When</th></tr>
+        <tr>
+          <td><strong>PVIFA</strong><br><span class="note">PV Interest Factor for Annuity</span></td>
+          <td><span class="formula">PVIFA(i,n) = [1 − (1+i)⁻ⁿ] / i</span></td>
+          <td>Find PV of equal annual receipts/payments<br>EMI, loan repayment, welfare fund single deposit</td>
+        </tr>
+        <tr>
+          <td><strong>FVIFA</strong><br><span class="note">FV Interest Factor for Annuity</span></td>
+          <td><span class="formula">FVIFA(i,n) = [(1+i)ⁿ − 1] / i</span></td>
+          <td>Find future total of equal annual deposits (sinking fund)</td>
+        </tr>
+        <tr>
+          <td><strong>PV of Annuity</strong></td>
+          <td><span class="formula">PV = A × PVIFA(i,n)</span></td>
+          <td>Single deposit needed now to fund equal future payments</td>
+        </tr>
+        <tr>
+          <td><strong>FV of Annuity</strong></td>
+          <td><span class="formula">FV = A × FVIFA(i,n)</span></td>
+          <td>Total accumulated from equal periodic deposits</td>
+        </tr>
+        <tr>
+          <td><strong>EMI / EAW / Capital Recovery</strong></td>
+          <td><span class="formula">A = PV × [i(1+i)ⁿ / ((1+i)ⁿ−1)]</span><br>
+              <span class="formula">A = PV / PVIFA(i,n)</span></td>
+          <td>Find equal annual payment for a given loan/PV<br>Car loan, mortgage, EAW comparison</td>
+        </tr>
+        <tr>
+          <td><strong>Sinking Fund Factor</strong></td>
+          <td><span class="formula">A = FV × [i / ((1+i)ⁿ−1)]</span><br>
+              <span class="formula">A = FV / FVIFA(i,n)</span></td>
+          <td>Annual deposit needed to accumulate a target FV</td>
+        </tr>
+      </table>
+      <div class="decision">
+        <strong>Key Trigger:</strong> If payments are <em>equal every year</em> → use PVIFA or FVIFA. If amounts differ year to year → use PVIF individually for each year.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PROJECT EVALUATION -->
+  <div class="section purple">
+    <div class="section-header"><span class="icon">📊</span> 3. Project Evaluation (NPV, IRR, PI, PBP)</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Method</th><th>Formula</th><th>Decision Rule</th></tr>
+        <tr>
+          <td><strong>NPV</strong><br><span class="note">Net Present Value</span></td>
+          <td><span class="formula">NPV = Σ[CFₜ / (1+i)ᵗ] − I₀</span><br>
+              <span class="formula">NPV = Σ[CFₜ × PVIF(i,t)] − I₀</span><br>
+              <span class="note">I₀ = Initial investment, CFₜ = Cash flow at year t</span></td>
+          <td>NPV &gt; 0 → Accept ✅<br>NPV &lt; 0 → Reject ❌<br>Higher NPV → Better project</td>
+        </tr>
+        <tr>
+          <td><strong>IRR</strong><br><span class="note">Internal Rate of Return</span></td>
+          <td><span class="formula">Find i* where NPV = 0</span><br>
+              <span class="formula">IRR ≈ i₁ + [NPV₁/(NPV₁−NPV₂)] × (i₂−i₁)</span><br>
+              <span class="note">Interpolate between two trial rates</span></td>
+          <td>IRR &gt; MARR → Accept ✅<br>IRR &lt; MARR → Reject ❌</td>
+        </tr>
+        <tr>
+          <td><strong>PI / BCR</strong><br><span class="note">Profitability Index / Benefit-Cost Ratio</span></td>
+          <td><span class="formula">PI = PV of Inflows / Initial Investment</span><br>
+              <span class="formula">PI = (NPV + I₀) / I₀</span></td>
+          <td>PI &gt; 1 → Accept ✅<br>PI &lt; 1 → Reject ❌<br>Higher PI → Better (when comparing)</td>
+        </tr>
+        <tr>
+          <td><strong>PBP</strong><br><span class="note">Payback Period</span></td>
+          <td><span class="formula">Sum cash flows until = I₀</span><br>
+              <span class="note">No discounting; cumulative addition year by year</span></td>
+          <td>Shorter PBP → Preferred<br>Compare with target payback period</td>
+        </tr>
+        <tr>
+          <td><strong>ARR</strong><br><span class="note">Accounting Rate of Return</span></td>
+          <td><span class="formula">ARR = Avg Annual Profit / Avg Investment × 100</span><br>
+              <span class="formula">Avg Investment = (I₀ + Salvage) / 2</span></td>
+          <td>ARR &gt; target rate → Accept ✅<br>No time value of money used</td>
+        </tr>
+        <tr>
+          <td><strong>MARR</strong><br><span class="note">Minimum Attractive Rate of Return</span></td>
+          <td><span class="formula">Compare: IRR vs MARR</span><br>
+              <span class="note">MARR is the minimum acceptable return (given in problem)</span></td>
+          <td>It's a threshold, not a formula. IRR must exceed it.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4. PRESENT WORTH / FUTURE WORTH COMPARISON -->
+  <div class="section teal">
+    <div class="section-header"><span class="icon">⚖️</span> 4. Present Worth & Future Worth (Comparing Alternatives)</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Method</th><th>Formula</th><th>Use When</th></tr>
+        <tr>
+          <td><strong>Present Worth (PW)</strong></td>
+          <td><span class="formula">PW = −C₀ + Annual Benefits × PVIFA(i,n) + Salvage × PVIF(i,n)</span></td>
+          <td>Compare two cost alternatives; pick <em>lower cost</em> (or higher PW of benefits)</td>
+        </tr>
+        <tr>
+          <td><strong>Future Worth (FW)</strong></td>
+          <td><span class="formula">FW = PW × (1+i)ⁿ</span></td>
+          <td>Compare at end of project life instead of beginning</td>
+        </tr>
+        <tr>
+          <td><strong>EAW / EAC</strong><br><span class="note">Equal Annual Worth / Cost</span></td>
+          <td><span class="formula">EAW = Annual Revenue − C₀/PVIFA + Salvage/FVIFA</span><br>
+              <span class="formula">EAW = Annual Revenue − C₀ × CRF + Salvage × SFF</span></td>
+          <td>Compare alternatives with different lives; pick highest EAW (or lowest EAC)</td>
+        </tr>
+        <tr>
+          <td><strong>Capital Recovery Factor (CRF)</strong></td>
+          <td><span class="formula">CRF = i(1+i)ⁿ / ((1+i)ⁿ − 1) = 1/PVIFA(i,n)</span></td>
+          <td>Annual cost of owning an asset (depreciation + interest)</td>
+        </tr>
+      </table>
+      <div class="decision">
+        <strong>Aqueduct-type questions:</strong> Calculate PW of each option → Pick the one with <em>lower PW of cost</em> (or higher PW of net benefit).
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. BREAK-EVEN ANALYSIS -->
+  <div class="section red">
+    <div class="section-header"><span class="icon">📉</span> 5. Break-Even Analysis</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Formula</th><th>Formula Expression</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>Contribution per Unit</strong></td>
+          <td><span class="formula">C = SP − VC</span><br>
+              <span class="note">SP = Selling Price/unit, VC = Variable Cost/unit</span></td>
+          <td>Variable Cost = Variable Mfg + Variable Selling costs</td>
+        </tr>
+        <tr>
+          <td><strong>P/V Ratio (C/S Ratio)</strong></td>
+          <td><span class="formula">P/V = (SP − VC) / SP × 100</span><br>
+              <span class="formula">P/V = Contribution / Sales × 100</span></td>
+          <td>Measures % of sales that covers fixed costs; higher = better</td>
+        </tr>
+        <tr>
+          <td><strong>BEP in Units</strong></td>
+          <td><span class="formula">BEP (units) = Total Fixed Cost / (SP − VC)</span><br>
+              <span class="formula">BEP (units) = FC / Contribution per unit</span></td>
+          <td>FC = Fixed Factory OH + Fixed Selling OH</td>
+        </tr>
+        <tr>
+          <td><strong>BEP in Rupees (Sales)</strong></td>
+          <td><span class="formula">BEP (Rs.) = Total FC / P/V Ratio</span><br>
+              <span class="formula">BEP (Rs.) = BEP (units) × SP</span></td>
+          <td>Sales value at no-profit no-loss point</td>
+        </tr>
+        <tr>
+          <td><strong>Units for Target Profit</strong></td>
+          <td><span class="formula">Units = (FC + Target Profit) / Contribution per unit</span></td>
+          <td>"Units needed to earn Rs. X profit"</td>
+        </tr>
+        <tr>
+          <td><strong>Sales for Target Profit</strong></td>
+          <td><span class="formula">Sales = (FC + Target Profit) / P/V Ratio</span></td>
+          <td>Revenue needed to achieve target profit</td>
+        </tr>
+        <tr>
+          <td><strong>Margin of Safety (MOS)</strong></td>
+          <td><span class="formula">MOS = Actual Sales − BEP Sales</span><br>
+              <span class="formula">MOS % = (MOS / Actual Sales) × 100</span></td>
+          <td>How far sales can drop before loss occurs</td>
+        </tr>
+        <tr>
+          <td><strong>Profit</strong></td>
+          <td><span class="formula">Profit = MOS × P/V Ratio</span><br>
+              <span class="formula">Profit = (Sales − BEP Sales) × P/V Ratio</span></td>
+          <td>Quick profit calculation using MOS</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 6. DEPRECIATION -->
+  <div class="section orange">
+    <div class="section-header"><span class="icon">🏭</span> 6. Depreciation Methods</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Method</th><th>Formula</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>Straight Line (SLM)</strong></td>
+          <td><span class="formula">D = (C − S) / n</span><br>
+              <span class="formula">Book Value = C − D×t</span></td>
+          <td>C = Cost, S = Salvage value, n = life in years<br>Equal depreciation every year</td>
+        </tr>
+        <tr>
+          <td><strong>Written Down Value (WDV) / Declining Balance</strong></td>
+          <td><span class="formula">D_t = BV_{t-1} × d</span><br>
+              <span class="formula">d = 1 − (S/C)^(1/n)</span></td>
+          <td>d = depreciation rate; BV reduces each year<br>Higher depreciation in early years</td>
+        </tr>
+        <tr>
+          <td><strong>Sum of Years Digits (SYD)</strong></td>
+          <td><span class="formula">D_t = (n−t+1) / SYD × (C−S)</span><br>
+              <span class="formula">SYD = n(n+1)/2</span></td>
+          <td>Accelerated depreciation; weights earlier years more</td>
+        </tr>
+        <tr>
+          <td><strong>Double Declining Balance (DDB)</strong></td>
+          <td><span class="formula">D_t = (2/n) × BV_{t-1}</span></td>
+          <td>Double the SLM rate applied to book value</td>
+        </tr>
+        <tr>
+          <td><strong>Units of Production</strong></td>
+          <td><span class="formula">D = (C−S) / Total Units × Units Produced</span></td>
+          <td>Based on actual usage, not time</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7. COST ESTIMATION -->
+  <div class="section navy">
+    <div class="section-header"><span class="icon">🔧</span> 7. Cost Estimation & Indices</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Model</th><th>Formula</th><th>Use When</th></tr>
+        <tr>
+          <td><strong>Power-Sizing (Six-Tenths) Model</strong></td>
+          <td><span class="formula">C₂ = C₁ × (Q₂/Q₁)ˣ × (Index₂/Index₁)</span><br>
+              <span class="note">x = scaling exponent (often 0.6 or 0.75 in problems)</span></td>
+          <td>Estimating cost of equipment with different capacity<br>Centrifuge, reactor, plant sizing questions</td>
+        </tr>
+        <tr>
+          <td><strong>Cost Index Method</strong></td>
+          <td><span class="formula">C₂ = C₁ × (Index₂ / Index₁)</span></td>
+          <td>Adjusting past cost to present using price index</td>
+        </tr>
+        <tr>
+          <td><strong>Factor Method</strong></td>
+          <td><span class="formula">Total Cost = f × C_major equipment</span><br>
+              <span class="note">f = installation/indirect cost factor</span></td>
+          <td>Quick plant cost estimation</td>
+        </tr>
+        <tr>
+          <td><strong>Make vs Buy Decision</strong></td>
+          <td><span class="formula">Make cost = Variable Cost/unit × Q + Fixed Cost</span><br>
+              <span class="formula">Buy cost = Purchase Price/unit × Q</span><br>
+              <span class="note">Compare at expected quantity Q</span></td>
+          <td>Should firm manufacture or outsource a component?</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 8. INFLATION -->
+  <div class="section brown">
+    <div class="section-header"><span class="icon">📈</span> 8. Inflation Adjustments</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Concept</th><th>Formula</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>Real vs Nominal Cash Flow</strong></td>
+          <td><span class="formula">Actual CF = Real CF × (1 + f)ⁿ</span><br>
+              <span class="note">f = annual inflation rate</span></td>
+          <td>Convert today's value to future inflated value</td>
+        </tr>
+        <tr>
+          <td><strong>Combined Interest-Inflation Rate</strong></td>
+          <td><span class="formula">i_c = i + f + i×f</span><br>
+              <span class="formula">≈ i + f (for small values)</span></td>
+          <td>Discount rate when cash flows are in nominal terms with inflation</td>
+        </tr>
+        <tr>
+          <td><strong>PV with Inflation (Welfare Fund type)</strong></td>
+          <td><span class="formula">Inflate each CF: CF_t = A × (1+f)ᵗ</span><br>
+              <span class="formula">Then PV = Σ [CF_t × PVIF(i,t)]</span></td>
+          <td>Employee welfare fund with inflation: inflate amounts, then discount at nominal rate</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 9. EXPECTED VALUE / PROBABILITY -->
+  <div class="section blue">
+    <div class="section-header"><span class="icon">🎲</span> 9. Expected Value & Decision Under Uncertainty</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Concept</th><th>Formula</th><th>Use When</th></tr>
+        <tr>
+          <td><strong>Expected Value</strong></td>
+          <td><span class="formula">E(X) = Σ [P_i × X_i]</span><br>
+              <span class="note">P_i = probability, X_i = outcome value</span></td>
+          <td>Dam height optimization, profit with probability, any risk analysis</td>
+        </tr>
+        <tr>
+          <td><strong>Expected PW</strong></td>
+          <td><span class="formula">E(PW) = Σ [P_i × PW_i]</span></td>
+          <td>When different scenarios have different probabilities</td>
+        </tr>
+        <tr>
+          <td><strong>Expected Annual Damage</strong></td>
+          <td><span class="formula">E(Damage) = Σ [P(flood) × Damage/year]</span></td>
+          <td>Dam/flood-protection cost-benefit analysis (dam height problems)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 10. SENSITIVITY ANALYSIS -->
+  <div class="section green">
+    <div class="section-header"><span class="icon">🎯</span> 10. Sensitivity Analysis</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Concept</th><th>Formula</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>Break-Even Value of Variable</strong></td>
+          <td><span class="formula">Set NPV = 0, solve for the variable</span></td>
+          <td>"By how much can X change before project becomes unviable?"</td>
+        </tr>
+        <tr>
+          <td><strong>% Change to Break Even</strong></td>
+          <td><span class="formula">% Change = (Break-even value − Base value) / Base value × 100</span></td>
+          <td>Identify which variable (sales volume, price, cost) is most critical</td>
+        </tr>
+        <tr>
+          <td><strong>Sensitivity Ratio</strong></td>
+          <td><span class="formula">SR = % change in NPV / % change in variable</span></td>
+          <td>Higher SR = more sensitive = riskier variable</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 11. SUMMARY TABLE -->
+  <div class="section purple">
+    <div class="section-header"><span class="icon">📋</span> 11. Master Summary – Formula Selection Table</div>
+    <div class="section-body">
+      <table>
+        <tr><th>Situation / Question Type</th><th>Formula to Use</th><th>Key Factor</th></tr>
+        <tr><td>Single amount, find future value</td><td><span class="formula">FV = PV×(1+i)ⁿ</span></td><td>FVIF(i,n)</td></tr>
+        <tr><td>Single amount, find present value</td><td><span class="formula">PV = FV/(1+i)ⁿ</span></td><td>PVIF(i,n)</td></tr>
+        <tr><td>Equal annual payments → future total</td><td><span class="formula">FV = A × FVIFA(i,n)</span></td><td>FVIFA(i,n)</td></tr>
+        <tr><td>Equal annual payments → present total</td><td><span class="formula">PV = A × PVIFA(i,n)</span></td><td>PVIFA(i,n)</td></tr>
+        <tr><td>Find EMI / annual payment from loan</td><td><span class="formula">A = PV / PVIFA(i,n)</span></td><td>PVIFA(i,n)</td></tr>
+        <tr><td>Annual deposit to reach future target</td><td><span class="formula">A = FV / FVIFA(i,n)</span></td><td>FVIFA(i,n)</td></tr>
+        <tr><td>Project with unequal cash flows</td><td><span class="formula">NPV = Σ[CF×PVIF] − I₀</span></td><td>PVIF each year</td></tr>
+        <tr><td>Find project's own rate of return</td><td><span class="formula">IRR: make NPV=0 (interpolate)</span></td><td>Two trial rates</td></tr>
+        <tr><td>Rank projects by size efficiency</td><td><span class="formula">PI = PV inflows / I₀</span></td><td>Must be &gt;1</td></tr>
+        <tr><td>How fast does project pay back?</td><td><span class="formula">Cumulative CF = I₀</span></td><td>No discounting</td></tr>
+        <tr><td>Compare 2 cost options (same life)</td><td><span class="formula">PW of each option</span></td><td>Lower PW = better</td></tr>
+        <tr><td>Compare 2 options (different lives)</td><td><span class="formula">EAW = Revenue − cost/PVIFA</span></td><td>Higher EAW = better</td></tr>
+        <tr><td>No profit, no loss point</td><td><span class="formula">BEP = FC / (SP−VC)</span></td><td>Contribution/unit</td></tr>
+        <tr><td>Units for target profit</td><td><span class="formula">(FC + Profit) / Contribution</span></td><td>Same as BEP logic</td></tr>
+        <tr><td>Equipment cost at different capacity</td><td><span class="formula">C₂=C₁×(Q₂/Q₁)ˣ×(Idx₂/Idx₁)</span></td><td>Power-sizing</td></tr>
+        <tr><td>Expected outcome under uncertainty</td><td><span class="formula">E(X) = Σ[P_i × X_i]</span></td><td>Probability weights</td></tr>
+        <tr><td>Depreciation (equal every year)</td><td><span class="formula">D = (C−S)/n</span></td><td>SLM</td></tr>
+        <tr><td>Depreciation (higher early years)</td><td><span class="formula">D_t = BV×d or SYD method</span></td><td>WDV / SYD</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p style="text-align:center; color:#888; font-size:0.85em; margin-top:10px;">
+    WBUT Economics for Engineers · All the best for your exam! 🎯
+  </p>
+
+</div>
+</body>
+</html>
